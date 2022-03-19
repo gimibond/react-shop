@@ -45,6 +45,10 @@
 .input-email {
 	margin-bottom: 22px;
 }
+::placeholder {
+	font-style: italic;
+	color:rgb(177, 170, 170);
+  }
 .primary-button {
 	background-color: var(--hospital-green);
 	border-radius: 8px;
