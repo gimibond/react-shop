@@ -2,12 +2,9 @@
   "name": "platzi-react-shop",
   "version": "1.0.0",
   "description": "A shop with react",
-  "homepage": "https://gimibond.github.io/react-shop/",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -b main -d dist",
     "start": "webpack serve --open",
     "build": "webpack --mode production"
   },
@@ -35,7 +32,6 @@
   },
   "devDependencies": {
     "css-loader": "^6.7.1",
-    "gh-pages": "^3.2.3",
     "mini-css-extract-plugin": "^2.6.0",
     "sass": "^1.49.9",
     "sass-loader": "^12.6.0",
