@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import OrderItem from '@components/OrderItem';
 import AppContext from '../context/AppContext';
 import '@styles/MyOrder.scss';
@@ -7,6 +7,8 @@ import arrow from '@icons/flechita.svg';
 const MyOrder = () => {
 	const { state } = useContext(AppContext);
 
+	const hideMyOrder = () => {document.getElementById("MyOrder").style.display = "none"};
+
 	const sumTotal = () => {
 		const reducer = (accumulator, currentValue) => accumulator + currentValue.price;
 		const sum = state.cart.reduce(reducer, 0);
@@ -14,9 +16,10 @@ const MyOrder = () => {
 	}
 
 	return (
-		<aside className="MyOrder">
+		
+		<aside className="MyOrder" id='MyOrder'>
 			<div className="title-container">
-				<img src={arrow} alt="arrow" />
+				<img src={arrow} alt="arrow" onClick={hideMyOrder}/>
 				<p className="title">My order</p>
 			</div>
 			<div className="my-order-content">
