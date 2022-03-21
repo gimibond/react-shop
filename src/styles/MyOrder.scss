@@ -18,6 +18,9 @@
 @keyframes swipeLeft {
 	100% {transform: translateX(-360px);}
 }
+.hide {
+	display: none;
+}
 .title-container {
 	display: flex;
 }

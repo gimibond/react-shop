@@ -7,7 +7,7 @@ import arrow from '@icons/flechita.svg';
 const MyOrder = () => {
 	const { state } = useContext(AppContext);
 
-	const hideMyOrder = () => {document.getElementById("MyOrder").style.display = "none"};
+	const [style, setStyle] = useState("MyOrder");
 
 	const sumTotal = () => {
 		const reducer = (accumulator, currentValue) => accumulator + currentValue.price;
@@ -17,9 +17,9 @@ const MyOrder = () => {
 
 	return (
 		
-		<aside className="MyOrder" id='MyOrder'>
+		<aside className={style}>
 			<div className="title-container">
-				<img src={arrow} alt="arrow" onClick={hideMyOrder}/>
+				<img src={arrow} alt="arrow" onClick={() => setStyle((style) => (style === "hide" ? "MyOrder" : "hide"))}/>
 				<p className="title">My order</p>
 			</div>
 			<div className="my-order-content">
